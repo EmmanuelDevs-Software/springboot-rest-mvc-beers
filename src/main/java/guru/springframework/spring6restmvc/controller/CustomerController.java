@@ -1,6 +1,5 @@
 package guru.springframework.spring6restmvc.controller;
 
-import guru.springframework.spring6restmvc.exceptions.NotFoundException;
 import guru.springframework.spring6restmvc.model.CustomerDTO;
 import guru.springframework.spring6restmvc.services.CustomerService;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +14,7 @@ import java.util.UUID;
 /**
  * Created by jt, Spring Framework Guru.
  */
+
 @RequiredArgsConstructor
 @RestController
 public class CustomerController {
@@ -25,7 +25,7 @@ public class CustomerController {
 
     @PatchMapping(CUSTOMER_PATH_ID)
     public ResponseEntity patchCustomerById(@PathVariable("customerId") UUID customerId,
-                                            @RequestBody CustomerDTO customer){
+                                                @RequestBody CustomerDTO customer){
 
         customerService.patchCustomerById(customerId, customer);
 
