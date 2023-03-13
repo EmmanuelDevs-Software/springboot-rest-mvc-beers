@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -34,7 +36,10 @@ public class BeerDTO {
 
     @NotNull
     private BigDecimal price;
+
+    @CreationTimestamp
     private LocalDateTime createdDate;
+    @UpdateTimestamp
     private LocalDateTime updateDate;
 
 }
