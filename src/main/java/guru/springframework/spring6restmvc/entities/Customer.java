@@ -1,7 +1,6 @@
 package guru.springframework.spring6restmvc.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.JdbcTypeCode;
@@ -28,12 +27,11 @@ public class Customer {
     private UUID id;
     private String name;
 
+    @Column(length = 255)
+    private String email;
+
     @Version
     private Integer version;
     private LocalDateTime createdDate;
     private LocalDateTime updateDate;
-
-    @Email
-    @Column(length = 255)
-    private String email;
 }

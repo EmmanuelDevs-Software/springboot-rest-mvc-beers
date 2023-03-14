@@ -22,13 +22,14 @@ class BootstrapDataTest {
     @Autowired
     CustomerRepository customerRepository;
 
-    BootstrapData bootstrapData;
     @Autowired
-    BeerCsvService beerCsvService;
+    BeerCsvService csvService;
+
+    BootstrapData bootstrapData;
 
     @BeforeEach
     void setUp() {
-        bootstrapData = new BootstrapData(beerRepository, customerRepository, beerCsvService);
+        bootstrapData = new BootstrapData(beerRepository, customerRepository, csvService);
     }
 
     @Test
