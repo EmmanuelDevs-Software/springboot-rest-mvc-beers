@@ -1,4 +1,4 @@
-package guru.springframework.spring6restmvc.exceptions;
+package guru.springframework.spring6restmvc.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.TransactionSystemException;
